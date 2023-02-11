@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.h1 {
+		@apply text-h1 font-sen font-bold;
+	}
+
+	.h2 {
+		@apply text-h2 font-sen font-bold;
+	}
+
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		@apply text-h3 font-sen font-bold;
+	}
+
+	.p {
+		@apply font-inter text-body;
+	}
+
+	.label {
+		@apply font-inter text-label;
+	}
+
+	.links {
+		a {
+			@apply transition-colors;
+			&:hover {
+				@apply text-yellow;
+			}
+		}
+	}
+}

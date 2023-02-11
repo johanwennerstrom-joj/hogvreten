@@ -1,0 +1,12 @@
+{
+  "_cts": {
+    "start": {}
+  },
+  "slices": {
+    "Hero": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}
