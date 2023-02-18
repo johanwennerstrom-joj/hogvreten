@@ -1,0 +1,55 @@
+{
+  "date": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2017-04-24"
+  },
+  "header": {
+    "__TYPE__": "FieldContent",
+    "value": "sugar",
+    "type": "Text"
+  },
+  "preamble": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Aute mollit minim officia sunt. Ea ut eu Lorem elit commodo sit reprehenderit occaecat veniam irure duis nulla. Amet aliquip duis reprehenderit nisi veniam minim cillum culpa voluptate nisi occaecat proident."
+        }
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "text_block$681fef7f-2776-4b82-88ef-81a62e49c2e5",
+        "name": "text_block",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Qui ullamco nostrud dolore mollit exercitation ex esse nostrud proident exercitation minim Lorem incididunt."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

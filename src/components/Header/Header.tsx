@@ -2,7 +2,7 @@ import { Container } from 'ui/Wrappers/Wrappers'
 
 const Header = () => {
 	return (
-		<header className='bg-gray-700 sticky top-0 z-50'>
+		<header className='bg-gray-700 sticky top-0 z-50 md:block hidden'>
 			<Container>
 				<nav className='flex justify-between py-md'>
 					<span className='font-inter text-body text-white tracking-wider font-normal uppercase'>

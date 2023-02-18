@@ -8,14 +8,14 @@
 	}
 
 	.h2 {
-		@apply text-h2 font-sen font-bold;
+		@apply text-h2 font-sen font-normal;
 	}
 
 	.h3,
 	.h4,
 	.h5,
 	.h6 {
-		@apply text-h3 font-sen font-bold;
+		@apply text-h3 font-sen font-normal;
 	}
 
 	.p {

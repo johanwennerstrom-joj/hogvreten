@@ -8,7 +8,7 @@ import Button from 'components/Button/Button'
 
 const Hero = ({ slice }: SliceComponentProps<HeroSlice>) => {
 	return (
-		<div className='h-screen relative'>
+		<div className='h-[85vh] relative'>
 			{isFilled.image(slice.primary.image) ? (
 				<Image
 					src={slice.primary.image.url}

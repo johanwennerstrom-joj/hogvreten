@@ -12,6 +12,9 @@
           "choices": {
             "hero": {
               "type": "SharedSlice"
+            },
+            "nyheter": {
+              "type": "SharedSlice"
             }
           }
         }

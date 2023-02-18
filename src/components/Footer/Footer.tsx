@@ -1,6 +1,4 @@
-import { Container } from '@/ui/Wrappers/Wrappers'
-import Image from 'next/image'
-import Logo from 'public/hsb-white.png'
+import { Container } from 'ui/Wrappers/Wrappers'
 
 const Footer = () => {
 	return (

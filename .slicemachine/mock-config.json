@@ -1,9 +1,21 @@
 {
   "_cts": {
-    "start": {}
+    "start": {},
+    "nyhet": {},
+    "site_settings": {}
   },
   "slices": {
     "Hero": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TextBlock": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Nyheter": {
       "default": {
         "primary": {}
       }

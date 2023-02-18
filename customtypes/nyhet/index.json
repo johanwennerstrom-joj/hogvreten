@@ -1,0 +1,44 @@
+{
+  "id": "nyhet",
+  "label": "Nyhet",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Datum",
+          "placeholder": ""
+        }
+      },
+      "header": {
+        "type": "Text",
+        "config": {
+          "label": "Rubrik",
+          "placeholder": ""
+        }
+      },
+      "preamble": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Ingress",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

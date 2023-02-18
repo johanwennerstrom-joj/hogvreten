@@ -3,7 +3,7 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero$f9e77251-a76a-49f7-8afd-8bafb0229b22",
+        "key": "hero$564d02b9-730c-456e-914f-974dad049fdd",
         "name": "hero",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -15,7 +15,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Signal"
+                    "text": "Finally"
                   }
                 }
               ]
@@ -26,7 +26,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Sint cillum Lorem ipsum mollit nostrud occaecat. Amet consequat magna adipisicing est aliquip anim dolore adipisicing incididunt aute dolore non eiusmod pariatur. Aute duis veniam nisi voluptate incididunt laboris voluptate tempor velit."
+                    "text": "Nisi id exercitation sunt est eu tempor amet minim proident in laboris."
                   }
                 }
               ]
@@ -35,13 +35,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
-                "width": 3958,
-                "height": 3958
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+                "width": 5848,
+                "height": 3899
               },
-              "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
-              "width": 3958,
-              "height": 3958,
+              "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+              "width": 5848,
+              "height": 3899,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -51,6 +51,39 @@
                 "background": "transparent"
               },
               "thumbnails": {}
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            },
+            "link_text": {
+              "__TYPE__": "FieldContent",
+              "value": "course",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "nyheter$9c71f616-1a5d-4298-a4b6-be8fcbbd169b",
+        "name": "nyheter",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "impossible",
+              "type": "Text"
             }
           },
           "items": [
