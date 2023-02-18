@@ -11,7 +11,7 @@ interface IConfig extends ClientConfig {
 }
 
 export const prismicClient = (config = {} as IConfig) => {
-	const client = createClient(process.env.REPO_NAME as string, {
+	const client = createClient('hogvreten', {
 		...config
 	})
 
