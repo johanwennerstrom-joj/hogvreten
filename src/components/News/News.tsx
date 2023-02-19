@@ -25,7 +25,7 @@ const News = ({ slice }: SliceComponentProps<NyheterSlice>) => {
 						{isLoading ? (
 							<Spinner />
 						) : (
-							data?.results.map((news) => <NewsThumbnail key={news.id} data={news.data} />)
+							data?.results.map((news) => <NewsThumbnail key={news.id} doc={news} />)
 						)}
 					</div>
 				</div>

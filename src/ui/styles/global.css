@@ -4,7 +4,7 @@
 
 @layer components {
 	.h1 {
-		@apply text-h1 font-sen font-bold;
+		@apply text-h1 font-sen font-semibold;
 	}
 
 	.h2 {
@@ -18,7 +18,8 @@
 		@apply text-h3 font-sen font-normal;
 	}
 
-	.p {
+	.p,
+	.body {
 		@apply font-inter text-body;
 	}
 

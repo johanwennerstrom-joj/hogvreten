@@ -6,6 +6,89 @@ import type * as prismic from '@prismicio/client'
 type Simplify<T> = {
 	[KeyType in keyof T]: T[KeyType]
 }
+/** Content for Om oss documents */
+interface AboutDocumentData {
+	/**
+	 * Sektion field in *Om oss*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.section_left
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+	 *
+	 */
+	section_left: prismicT.RichTextField
+	/**
+	 * Sektion field in *Om oss*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.section
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+	 *
+	 */
+	section: prismicT.RichTextField
+}
+/**
+ * Om oss document from Prismic
+ *
+ * - **API ID**: `about`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
+	Simplify<AboutDocumentData>,
+	'about',
+	Lang
+>
+/** Content for Kontakt documents */
+interface ContactDocumentData {
+	/**
+	 * Kontakt field in *Kontakt*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact.kontakt[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/group
+	 *
+	 */
+	kontakt: prismicT.GroupField<Simplify<ContactDocumentDataKontaktItem>>
+}
+/**
+ * Item in Kontakt → Kontakt
+ *
+ */
+export interface ContactDocumentDataKontaktItem {
+	/**
+	 * Kontaktblock field in *Kontakt → Kontakt*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact.kontakt[].contact_block
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+	 *
+	 */
+	contact_block: prismicT.RichTextField
+}
+/**
+ * Kontakt document from Prismic
+ *
+ * - **API ID**: `contact`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ContactDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
+	Simplify<ContactDocumentData>,
+	'contact',
+	Lang
+>
 /** Content for Nyhet documents */
 interface NyhetDocumentData {
 	/**
@@ -67,7 +150,7 @@ type NyhetDocumentDataSlicesSlice = TextBlockSlice
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NyhetDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
+export type NyhetDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<
 	Simplify<NyhetDocumentData>,
 	'nyhet',
 	Lang
@@ -85,6 +168,43 @@ interface SiteSettingsDocumentData {
 	 *
 	 */
 	information: prismicT.RichTextField
+	/**
+	 * Meny field in *Inställningar*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: site_settings.menu[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/group
+	 *
+	 */
+	menu: prismicT.GroupField<Simplify<SiteSettingsDocumentDataMenuItem>>
+}
+/**
+ * Item in Inställningar → Meny
+ *
+ */
+export interface SiteSettingsDocumentDataMenuItem {
+	/**
+	 * Länk field in *Inställningar → Meny*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: site_settings.menu[].link
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+	 *
+	 */
+	link: prismicT.LinkField
+	/**
+	 * Länk text field in *Inställningar → Meny*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: site_settings.menu[].link_text
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	link_text: prismicT.KeyTextField
 }
 /**
  * Inställningar document from Prismic
@@ -133,7 +253,12 @@ export type StartDocument<Lang extends string = string> = prismicT.PrismicDocume
 	'start',
 	Lang
 >
-export type AllDocumentTypes = NyhetDocument | SiteSettingsDocument | StartDocument
+export type AllDocumentTypes =
+	| AboutDocument
+	| ContactDocument
+	| NyhetDocument
+	| SiteSettingsDocument
+	| StartDocument
 /**
  * Primary content in Hero → Primary
  *
@@ -309,10 +434,16 @@ declare module '@prismicio/client' {
 	}
 	namespace Content {
 		export type {
+			AboutDocumentData,
+			AboutDocument,
+			ContactDocumentData,
+			ContactDocumentDataKontaktItem,
+			ContactDocument,
 			NyhetDocumentData,
 			NyhetDocumentDataSlicesSlice,
 			NyhetDocument,
 			SiteSettingsDocumentData,
+			SiteSettingsDocumentDataMenuItem,
 			SiteSettingsDocument,
 			StartDocumentData,
 			StartDocumentDataSlicesSlice,

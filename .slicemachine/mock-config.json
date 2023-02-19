@@ -2,7 +2,11 @@
   "_cts": {
     "start": {},
     "nyhet": {},
-    "site_settings": {}
+    "site_settings": {},
+    "about": {},
+    "contact": {
+      "kontakt": {}
+    }
   },
   "slices": {
     "Hero": {

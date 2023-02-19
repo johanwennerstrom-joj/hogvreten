@@ -13,6 +13,29 @@
           "allowTargetBlank": true,
           "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
+      },
+      "menu": {
+        "type": "Group",
+        "config": {
+          "label": "Meny",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Länk",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "Länk text",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }

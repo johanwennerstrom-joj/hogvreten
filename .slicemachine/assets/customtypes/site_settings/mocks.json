@@ -5,8 +5,36 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Duis aliqua consectetur excepteur occaecat duis aliqua Lorem nulla duis et reprehenderit magna incididunt."
+          "text": "Incididunt enim pariatur magna cupidatat nostrud ad esse incididunt id adipisicing non consequat dolore id laboris. Excepteur tempor anim duis enim voluptate."
         }
+      }
+    ]
+  },
+  "menu": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "link_text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "coffee",
+              "type": "Text"
+            }
+          ]
+        ]
       }
     ]
   }

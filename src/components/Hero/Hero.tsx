@@ -24,7 +24,7 @@ const Hero = ({ slice }: SliceComponentProps<HeroSlice>) => {
 				<Container css='relative z-10 h-full flex flex-col justify-center'>
 					<div>
 						<p className='body text-white'>
-							<strong>Välkommen</strong> till
+							<strong className='font-semibold'>Välkommen</strong> till
 						</p>
 						<PrismicRichText
 							field={slice.primary.title}

@@ -1,0 +1,24 @@
+{
+  "section_left": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Culpa culpa officia duis deserunt nulla excepteur irure. Sunt consequat officia in veniam reprehenderit laborum dolor minim voluptate est et. Ipsum anim ea irure dolore excepteur incididunt adipisicing exercitation nisi exercitation quis."
+        }
+      }
+    ]
+  },
+  "section": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Aute voluptate anim commodo aliquip sit reprehenderit commodo excepteur ad consequat excepteur sunt."
+        }
+      }
+    ]
+  }
+}

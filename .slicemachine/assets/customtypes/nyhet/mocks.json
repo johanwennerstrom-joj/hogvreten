@@ -2,11 +2,11 @@
   "date": {
     "__TYPE__": "FieldContent",
     "type": "Date",
-    "value": "2017-04-24"
+    "value": "2020-11-05"
   },
   "header": {
     "__TYPE__": "FieldContent",
-    "value": "sugar",
+    "value": "handsome",
     "type": "Text"
   },
   "preamble": {
@@ -15,16 +15,20 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Aute mollit minim officia sunt. Ea ut eu Lorem elit commodo sit reprehenderit occaecat veniam irure duis nulla. Amet aliquip duis reprehenderit nisi veniam minim cillum culpa voluptate nisi occaecat proident."
+          "text": "Reprehenderit incididunt ex aliqua non eu ipsum veniam incididunt excepteur velit esse. Sint voluptate esse veniam dolore in ea."
         }
       }
     ]
+  },
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "equator"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "text_block$681fef7f-2776-4b82-88ef-81a62e49c2e5",
+        "key": "text_block$912ffb6d-f7eb-4e59-bdbe-50015de2571b",
         "name": "text_block",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -36,7 +40,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Qui ullamco nostrud dolore mollit exercitation ex esse nostrud proident exercitation minim Lorem incididunt."
+                    "text": "Consectetur esse occaecat ad mollit."
                   }
                 }
               ]
