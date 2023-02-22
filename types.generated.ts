@@ -89,6 +89,39 @@ export type ContactDocument<Lang extends string = string> = prismicT.PrismicDocu
 	'contact',
 	Lang
 >
+/** Content for Dokument documents */
+interface DokumentDocumentData {
+	/**
+	 * Slice Zone field in *Dokument*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: dokument.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+	 *
+	 */
+	slices: prismicT.SliceZone<DokumentDocumentDataSlicesSlice>
+}
+/**
+ * Slice for *Dokument → Slice Zone*
+ *
+ */
+type DokumentDocumentDataSlicesSlice = DokumentsgrupperingSlice
+/**
+ * Dokument document from Prismic
+ *
+ * - **API ID**: `dokument`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DokumentDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
+	Simplify<DokumentDocumentData>,
+	'dokument',
+	Lang
+>
 /** Content for Nyhet documents */
 interface NyhetDocumentData {
 	/**
@@ -153,6 +186,39 @@ type NyhetDocumentDataSlicesSlice = TextBlockSlice
 export type NyhetDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<
 	Simplify<NyhetDocumentData>,
 	'nyhet',
+	Lang
+>
+/** Content for Nyheter documents */
+interface NyheterDocumentData {
+	/**
+	 * Slice Zone field in *Nyheter*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nyheter.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+	 *
+	 */
+	slices: prismicT.SliceZone<NyheterDocumentDataSlicesSlice>
+}
+/**
+ * Slice for *Nyheter → Slice Zone*
+ *
+ */
+type NyheterDocumentDataSlicesSlice = BildTextSlice
+/**
+ * Nyheter document from Prismic
+ *
+ * - **API ID**: `nyheter`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NyheterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
+	Simplify<NyheterDocumentData>,
+	'nyheter',
 	Lang
 >
 /** Content for Inställningar documents */
@@ -256,9 +322,157 @@ export type StartDocument<Lang extends string = string> = prismicT.PrismicDocume
 export type AllDocumentTypes =
 	| AboutDocument
 	| ContactDocument
+	| DokumentDocument
 	| NyhetDocument
+	| NyheterDocument
 	| SiteSettingsDocument
 	| StartDocument
+/**
+ * Primary content in BildText → Primary
+ *
+ */
+interface BildTextSliceDefaultPrimary {
+	/**
+	 * Titel field in *BildText → Primary*
+	 *
+	 * - **Field Type**: Title
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bild_text.primary.title
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+	 *
+	 */
+	title: prismicT.TitleField
+	/**
+	 * Ingress field in *BildText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bild_text.primary.description
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+	 *
+	 */
+	description: prismicT.RichTextField
+	/**
+	 * Bild field in *BildText → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bild_text.primary.image
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/image
+	 *
+	 */
+	image: prismicT.ImageField<never>
+}
+/**
+ * Default variation for BildText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `BildText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type BildTextSliceDefault = prismicT.SharedSliceVariation<
+	'default',
+	Simplify<BildTextSliceDefaultPrimary>,
+	never
+>
+/**
+ * Slice variation for *BildText*
+ *
+ */
+type BildTextSliceVariation = BildTextSliceDefault
+/**
+ * BildText Shared Slice
+ *
+ * - **API ID**: `bild_text`
+ * - **Description**: `BildText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type BildTextSlice = prismicT.SharedSlice<'bild_text', BildTextSliceVariation>
+/**
+ * Primary content in Dokumentsgruppering → Primary
+ *
+ */
+interface DokumentsgrupperingSliceDefaultPrimary {
+	/**
+	 * Titel field in *Dokumentsgruppering → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: dokumentsgruppering.primary.title
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	title: prismicT.KeyTextField
+}
+/**
+ * Item in Dokumentsgruppering → Items
+ *
+ */
+export interface DokumentsgrupperingSliceDefaultItem {
+	/**
+	 * Länk field in *Dokumentsgruppering → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: dokumentsgruppering.items[].link
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+	 *
+	 */
+	link: prismicT.LinkField
+	/**
+	 * Länk text field in *Dokumentsgruppering → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: dokumentsgruppering.items[].link_text
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	link_text: prismicT.KeyTextField
+	/**
+	 * Nedladdningsbar field in *Dokumentsgruppering → Items*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: dokumentsgruppering.items[].downloadable
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+	 *
+	 */
+	downloadable: prismicT.BooleanField
+}
+/**
+ * Default variation for Dokumentsgruppering Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Dokumentsgruppering`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type DokumentsgrupperingSliceDefault = prismicT.SharedSliceVariation<
+	'default',
+	Simplify<DokumentsgrupperingSliceDefaultPrimary>,
+	Simplify<DokumentsgrupperingSliceDefaultItem>
+>
+/**
+ * Slice variation for *Dokumentsgruppering*
+ *
+ */
+type DokumentsgrupperingSliceVariation = DokumentsgrupperingSliceDefault
+/**
+ * Dokumentsgruppering Shared Slice
+ *
+ * - **API ID**: `dokumentsgruppering`
+ * - **Description**: `Dokumentsgruppering`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type DokumentsgrupperingSlice = prismicT.SharedSlice<
+	'dokumentsgruppering',
+	DokumentsgrupperingSliceVariation
+>
 /**
  * Primary content in Hero → Primary
  *
@@ -439,9 +653,15 @@ declare module '@prismicio/client' {
 			ContactDocumentData,
 			ContactDocumentDataKontaktItem,
 			ContactDocument,
+			DokumentDocumentData,
+			DokumentDocumentDataSlicesSlice,
+			DokumentDocument,
 			NyhetDocumentData,
 			NyhetDocumentDataSlicesSlice,
 			NyhetDocument,
+			NyheterDocumentData,
+			NyheterDocumentDataSlicesSlice,
+			NyheterDocument,
 			SiteSettingsDocumentData,
 			SiteSettingsDocumentDataMenuItem,
 			SiteSettingsDocument,
@@ -449,6 +669,15 @@ declare module '@prismicio/client' {
 			StartDocumentDataSlicesSlice,
 			StartDocument,
 			AllDocumentTypes,
+			BildTextSliceDefaultPrimary,
+			BildTextSliceDefault,
+			BildTextSliceVariation,
+			BildTextSlice,
+			DokumentsgrupperingSliceDefaultPrimary,
+			DokumentsgrupperingSliceDefaultItem,
+			DokumentsgrupperingSliceDefault,
+			DokumentsgrupperingSliceVariation,
+			DokumentsgrupperingSlice,
 			HeroSliceDefaultPrimary,
 			HeroSliceDefault,
 			HeroSliceVariation,

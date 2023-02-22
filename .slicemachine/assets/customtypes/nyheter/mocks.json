@@ -1,0 +1,66 @@
+{
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "bild_text$45df19ee-c67d-43d2-aae5-1b0b615adf12",
+        "name": "bild_text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Shirt"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Adipisicing aute qui quis ex."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+                "width": 6597,
+                "height": 4398
+              },
+              "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+              "width": 6597,
+              "height": 4398,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

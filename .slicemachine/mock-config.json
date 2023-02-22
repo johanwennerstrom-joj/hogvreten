@@ -6,7 +6,9 @@
     "about": {},
     "contact": {
       "kontakt": {}
-    }
+    },
+    "dokument": {},
+    "nyheter": {}
   },
   "slices": {
     "Hero": {
@@ -20,6 +22,17 @@
       }
     },
     "Nyheter": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Dokumentsgruppering": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "BildText": {
       "default": {
         "primary": {}
       }

@@ -1,0 +1,54 @@
+{
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "dokumentsgruppering$315a48c5-bc9a-4a8a-9d0e-5cd72ec2387a",
+        "name": "dokumentsgruppering",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "post",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://prismic.io"
+                    }
+                  }
+                ],
+                [
+                  "link_text",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "typical",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "downloadable",
+                  {
+                    "__TYPE__": "BooleanContent",
+                    "value": false
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

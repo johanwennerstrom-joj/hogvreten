@@ -5,18 +5,20 @@ import { Container, Section } from 'ui/Wrappers/Wrappers'
 import { isFilled } from '@prismicio/helpers'
 import { generateImageBlur } from 'utils/prismic'
 import Button from 'components/Button/Button'
+import styles from 'styles/custom.module.css'
 
 const Hero = ({ slice }: SliceComponentProps<HeroSlice>) => {
 	return (
-		<div className='h-[85vh] relative'>
+		<div className='h-[90vh] relative'>
 			{isFilled.image(slice.primary.image) ? (
 				<Image
 					src={slice.primary.image.url}
 					alt={slice.primary.image.alt ?? ''}
 					fill
+					priority
 					blurDataURL={generateImageBlur(slice.primary.image) ?? ''}
 					placeholder='blur'
-					className='object-fill object-center top-0 left-0 z-0'
+					className='object-cover backdrop-blur-sm object-center top-0 left-0 z-0'
 					quality={90}
 				/>
 			) : null}
@@ -32,11 +34,13 @@ const Hero = ({ slice }: SliceComponentProps<HeroSlice>) => {
 								heading1: ({ children }) => <h1 className='h1 text-white'>{children}</h1>
 							}}
 						/>
-						<div className='md:w-1/2 py-md'>
+						<div className='md:w-1/2 py-sm'>
 							<PrismicRichText
 								field={slice.primary.description}
 								components={{
-									paragraph: ({ children }) => <p className='body text-white'>{children}</p>
+									paragraph: ({ children }) => (
+										<p className={`body text-white ${styles.tshadow}`}>{children}</p>
+									)
 								}}
 							/>
 						</div>

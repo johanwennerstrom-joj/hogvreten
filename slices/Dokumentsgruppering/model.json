@@ -1,0 +1,51 @@
+{
+  "id": "dokumentsgruppering",
+  "type": "SharedSlice",
+  "name": "Dokumentsgruppering",
+  "description": "Dokumentsgruppering",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Dokumentsgruppering",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titel",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Länk",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Länk text",
+            "placeholder": ""
+          }
+        },
+        "downloadable": {
+          "type": "Boolean",
+          "config": {
+            "label": "Nedladdningsbar",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

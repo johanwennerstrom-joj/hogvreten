@@ -35,6 +35,10 @@ export const linkResolver: LinkResolverFunction = (doc) => {
 			return '/kontakt'
 		case 'about':
 			return '/om-oss'
+		case 'dokument':
+			return '/dokument'
+		case 'nyheter':
+			return '/nyheter'
 		default:
 			return '/'
 	}
